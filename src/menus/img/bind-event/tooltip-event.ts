@@ -76,8 +76,12 @@ export function createShowHideFn(editor: Editor) {
             {
                 $elem: $(`<span>${t('说明')}</span>`),
                 onClick: (editor: Editor, $node: DomElement) => {
-                    $node.removeAttr('width')
-                    $node.removeAttr('height')
+                    var alt: string | null = prompt("输入图片说明：")
+                    if (alt != null) {
+                        $node.attr('alt', alt)
+                    } else {
+                        $node.removeAttr('alt')
+                    }
 
                     // 返回 true，表示执行完之后，隐藏 tooltip。否则不隐藏。
                     return true
