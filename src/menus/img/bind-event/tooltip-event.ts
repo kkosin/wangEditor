@@ -84,13 +84,14 @@ export function createShowHideFn(editor: Editor) {
                     }
 
                     // 返回 true，表示执行完之后，隐藏 tooltip。否则不隐藏。
-                    return true
+                    return false
                 },
             },
         ]
 
         tooltip = new Tooltip(editor, $node, conf)
         tooltip.create()
+        console.log('>>> show')
     }
 
     /**
@@ -102,6 +103,7 @@ export function createShowHideFn(editor: Editor) {
             tooltip.remove()
             tooltip = null
         }
+        console.log('>>> hidden')
     }
 
     return {
