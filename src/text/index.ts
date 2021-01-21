@@ -463,8 +463,8 @@ class Text {
             if (
                 $target.getNodeName() === 'IMG' &&
                 (!$target.elems[0].getAttribute('class') ||
-                    $target.elems[0].getAttribute('class') !== 'eleImg') &&
-                !$target.elems[0].getAttribute('alt')
+                    $target.elems[0].getAttribute('class') !== 'eleImg')
+                //!$target.elems[0].getAttribute('alt')
             ) {
                 // 当前点击的就是img
                 e.stopPropagation()

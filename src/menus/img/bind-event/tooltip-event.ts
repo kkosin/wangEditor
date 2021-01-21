@@ -91,7 +91,6 @@ export function createShowHideFn(editor: Editor) {
 
         tooltip = new Tooltip(editor, $node, conf)
         tooltip.create()
-        console.log('>>> show')
     }
 
     /**
@@ -103,7 +102,6 @@ export function createShowHideFn(editor: Editor) {
             tooltip.remove()
             tooltip = null
         }
-        console.log('>>> hidden')
     }
 
     return {
