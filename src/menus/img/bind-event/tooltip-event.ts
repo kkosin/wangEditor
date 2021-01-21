@@ -76,7 +76,7 @@ export function createShowHideFn(editor: Editor) {
             {
                 $elem: $(`<span>${t('说明')}</span>`),
                 onClick: (editor: Editor, $node: DomElement) => {
-                    var alt: string | null = prompt("输入图片说明：")
+                    var alt: string | null = prompt("输入图片说明：", $node.attr('alt'))
                     if (alt != null) {
                         $node.attr('alt', alt)
                     } else {
