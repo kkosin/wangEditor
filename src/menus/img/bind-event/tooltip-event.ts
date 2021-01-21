@@ -73,6 +73,16 @@ export function createShowHideFn(editor: Editor) {
                     return true
                 },
             },
+            {
+                $elem: $(`<span>${t('说明')}</span>`),
+                onClick: (editor: Editor, $node: DomElement) => {
+                    $node.removeAttr('width')
+                    $node.removeAttr('height')
+
+                    // 返回 true，表示执行完之后，隐藏 tooltip。否则不隐藏。
+                    return true
+                },
+            },
         ]
 
         tooltip = new Tooltip(editor, $node, conf)
